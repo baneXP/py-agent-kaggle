@@ -1,0 +1,9 @@
+agent_class: LlmAgent
+name: small_sample_feature_source
+model: gemini-3.1-flash-lite
+instruction: !include ../prompts/small.md
+tools:
+  - get_status
+skills:
+  - skills/robust-tabular
+generate_content_config: !include ../configs/sampling.yaml

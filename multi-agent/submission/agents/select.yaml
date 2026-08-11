@@ -1,0 +1,8 @@
+agent_class: LlmAgent
+name: final_selection_controller
+model: gemini-3.1-flash-lite
+instruction: !include ../prompts/select.md
+tools:
+  - get_status
+  - select_submission
+generate_content_config: !include ../configs/sampling.yaml

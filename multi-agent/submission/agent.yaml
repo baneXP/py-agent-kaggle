@@ -1,0 +1,14 @@
+agent_class: SequentialAgent
+name: weighted_cv_pipeline_deep
+sub_agents:
+  - config_path: agents/quick.yaml
+  - config_path: agents/portfolio.yaml
+  - config_path: agents/zeroshot.yaml
+  - config_path: agents/xgb.yaml
+  - config_path: agents/small.yaml
+  - config_path: agents/gam.yaml
+  - config_path: agents/rsfc.yaml
+  - config_path: agents/temporal.yaml
+  - config_path: agents/neural.yaml
+  - config_path: agents/meta.yaml
+  - config_path: agents/select.yaml

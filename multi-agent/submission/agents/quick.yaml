@@ -1,0 +1,10 @@
+agent_class: LlmAgent
+name: quick_baseline_controller
+model: gemini-3.1-flash-lite
+instruction: !include ../prompts/quick.md
+tools:
+  - submit_predictions
+  - get_status
+skills:
+  - skills/robust-tabular
+generate_content_config: !include ../configs/sampling.yaml

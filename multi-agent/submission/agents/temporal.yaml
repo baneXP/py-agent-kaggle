@@ -1,0 +1,10 @@
+agent_class: LlmAgent
+name: temporal_structure_controller
+model: gemini-3.1-flash-lite
+instruction: !include ../prompts/temporal.md
+tools:
+  - submit_predictions
+  - get_status
+skills:
+  - skills/robust-tabular
+generate_content_config: !include ../configs/sampling.yaml

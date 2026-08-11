@@ -1,0 +1,9 @@
+agent_class: LlmAgent
+name: gam_feature_source
+model: gemini-3.1-flash-lite
+instruction: !include ../prompts/gam.md
+tools:
+  - get_status
+skills:
+  - skills/robust-tabular
+generate_content_config: !include ../configs/sampling.yaml
