@@ -1,0 +1,17 @@
+name: data_analyst
+description: >-
+  Performs exploratory data analysis on datasets. Examines distributions,
+  correlations, missing values, feature types, and potential data quality
+  issues. Returns a structured analysis report.
+model: gemini-3-flash-preview
+instruction: !include ../prompts/data_analyst.md
+tools:
+  - run_command
+  - read_file
+  - write_file
+generate_content_config:
+  temperature: 0.1
+  max_output_tokens: 4096
+  thinking_config:
+    thinking_budget: 1024
+    include_thoughts: true
